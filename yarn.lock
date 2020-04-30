@@ -513,6 +513,11 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
+nltk-stopwords@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/nltk-stopwords/-/nltk-stopwords-1.0.3.tgz#babc1ee28bf4d035655b6ba74a7c5bea0df7e6e8"
+  integrity sha1-urwe4ov00DVlW2unSnxb6g335ug=
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
