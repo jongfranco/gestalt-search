@@ -5,6 +5,7 @@ const english = [...stopwords.load('english'), 'what', 'know']
 module.exports = {
     async search(params) {
         const keywords = params.keywords
+        const size = params.size || 10
         let q = params.q
             .toLowerCase()
             .split(' ')
@@ -15,6 +16,7 @@ module.exports = {
             
         const result = es.search({
             index: 'covid',
+            size: size,
             body: {
                 query: {
                     multi_match: {
