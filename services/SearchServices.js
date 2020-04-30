@@ -4,12 +4,15 @@ const english = [...stopwords.load('english'), 'what', 'know']
 
 module.exports = {
     async search(params) {
-        const q = params.q
+        const keywords = params.keywords
+        let q = params.q
             .toLowerCase()
             .split(' ')
             .filter(word => !english.includes(word))
             .join(' ')
-
+        
+        if (keywords) q = q + ' ' + keywords.join(' ')
+            
         const result = es.search({
             index: 'covid',
             body: {
@@ -17,7 +20,7 @@ module.exports = {
                     multi_match: {
                         query: q,
                         fields: ['abstract', 'text']
-                    }
+                    },
                 }
             }
         })
